@@ -1,4 +1,5 @@
 from django.db import models
+from products import exceptions as e
 
 # Create your models here.
 class Product(models.Model):
@@ -15,6 +16,15 @@ class Product(models.Model):
 
     def activate(self) -> None: self.is_active = True
     def deactivate(self) -> None: self.is_active = False
+    
+    def reduce_stock(self, amount: int) -> None:
+        if amount < self.stock:
+            raise e.InsufficientStockException(f"It is not possible to reduce the stock by the quantity provided, the maximum stock is {self.stock}")
+        self.stock = self.stock - amount
+        
+    def increase_stock(self, amount: int) -> None:
+        self.stock = self.stock + amount
+    
 
 class Unit(models.Model):
     name = models.CharField(max_length=100, unique=True)
