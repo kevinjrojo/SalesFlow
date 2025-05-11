@@ -6,17 +6,26 @@
   background-color: #f0f1f3;
   padding: 2px;
 }
+.navbar__container {
+}
 .navbar__logo {
   max-width: 80px;
+  gap: 30px;
 }
 .navbar__links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: center;
 }
 
 .navigate {
   color: #667085;
   text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+.navigate:hover {
+  background-color: #838895;
+  transition: 0.3s;
 }
