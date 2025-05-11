@@ -25,7 +25,31 @@ SECRET_KEY = 'django-insecure-2@gfsv%rz=b0)fllcbqlgkd&9g)2w6q(-ser$sla9xuy4-jjrn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.19']
+ALLOWED_HOSTS = ['192.168.0.19', 'localhost']
+
+
+# Cors configurations
+CORS_ALLOWED_ORIGINS = [
+    'http://192.168.0.10:3000',
+    'http://192.168.0.19:8000',
+    'http://localhost:3000',
+]
+
+# CORS_ALLOWED_ALL_ORIGINS = True
+
+CORS_ALLOW_HEADERS = [
+    "authorization",
+    "content-type",
+    "x-csrftoken",
+]
+
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+]
 
 
 # Application definition
@@ -37,18 +61,25 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     
     # apps
     'products',
+    'clients',
+    'sales',
     
     # Django rest framework
     'rest_framework',
 ]
 
 MIDDLEWARE = [
+    # Cors
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    
+    # ---
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
