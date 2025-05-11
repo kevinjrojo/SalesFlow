@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import response as res, request as req, viewsets, views, filters
+from rest_framework import response as res, request as req, viewsets, views, filters, status
 from products import models, serializers
 
 # Create your views here.
@@ -24,8 +24,7 @@ class ProductCategoryViewSet(viewsets.ModelViewSet):
     queryset =  models.ProductCategory.objects.all()
     serializer_class = serializers.ProductCategorySerializer
     
-
-class ProductView(viewsets.ViewSet):
+class ProductView(viewsets.ModelViewSet):
     """
     Urls:
     /product/ -> GET (all), POST
@@ -37,3 +36,32 @@ class ProductView(viewsets.ViewSet):
     filter_backends = [filters.SearchFilter]
     search_fields = ['name', 'gtin']
     
+    def deactivate(self, request: req.Request, pk: int) -> res.Response:
+        """
+        Soft Delete a product
+        """
+        try:
+            product = self.queryset.get(pk=pk)
+            product.deactivate()
+            product.save()
+            return res.Response(status=status.HTTP_200_OK,
+                                data= {'details': f'Product with id {pk} deactivate successfuly.'})
+            
+        except models.Product.DoesNotExist:
+            return res.Response(status=404, data={'error': f'Product with id {pk} not found'})
+    
+    def activate(self, request: req.Request, pk: int) -> res.Response:
+        """
+        Suspended product activation
+        """
+        
+        try:
+            product = self.queryset.get(pk=pk)
+            product.activate()
+            product.save()
+            
+            return res.Response(status= status.HTTP_200_OK, 
+                                data= {'details': f'Product with id {pk} activate successfuly.'})
+        except models.Product.DoesNotExist:
+            return res.Response(status= status.HTTP_404_NOT_FOUND,
+                                data= {"error": f"Product with id {pk} not found"})
