@@ -6,9 +6,9 @@ class Product(models.Model):
     description = models.TextField(blank= True)
     sku = models.CharField(max_length=100, unique=True, null=True)
     gtin = models.CharField(max_length=100, unique=True, null=True)
-    stock = models.DecimalField(default=0)
-    unit = models.ForeignKey('products.Unit', on_delete=models.SET_NULL)
-    category = models.ForeignKey('products.ProductCategory', on_delete= models.SET_NULL)
+    stock = models.DecimalField(default=0, max_digits=10, decimal_places=3)
+    unit = models.ForeignKey('products.Unit', on_delete=models.SET_NULL, null=True)
+    category = models.ForeignKey('products.ProductCategory', on_delete= models.SET_NULL, null=True)
     is_active = models.BooleanField(default=True)
 
 class Unit(models.Model):
