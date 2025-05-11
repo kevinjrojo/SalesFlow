@@ -1,0 +1,22 @@
+.navbar {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column: span 1 / span 1;
+  grid-row: span 5 / span 5;
+  background-color: #f0f1f3;
+  padding: 2px;
+}
+.navbar__logo {
+  max-width: 80px;
+}
+.navbar__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navigate {
+  color: #667085;
+  text-decoration: none;
+}
