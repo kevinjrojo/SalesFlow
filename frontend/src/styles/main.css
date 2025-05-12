@@ -16,14 +16,21 @@
   width: 100%;
   background-color: #f0f1f3;
 }
+.main__products_category {
+}
 .main__mount {
   text-align: end;
 }
 .main__products_table {
   grid-column-start: 1;
   background-color: #f0f1f3;
+  height: 35vh;
+  overflow: auto;
 }
-
+.main__products_items {
+  height: 40vh;
+  overflow: auto;
+}
 .main__tiket {
   background-color: #f0f1f3;
 }
@@ -34,9 +41,12 @@
   font-size: 11px;
 }
 
-/* .form_main_box {
-
-} */
+.form_main_box {
+  grid-column-start: 1;
+  grid-row-start: 4;
+  display: flex;
+  justify-content: space-between;
+}
 .category {
   font-size: 12px;
   width: 5%;

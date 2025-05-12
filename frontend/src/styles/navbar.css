@@ -27,6 +27,7 @@
   text-decoration: none;
   padding: 5px;
   border-radius: 5px;
+  font-size: 16px;
 }
 .navigate:hover {
   background-color: #838895;

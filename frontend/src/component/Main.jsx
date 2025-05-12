@@ -210,7 +210,7 @@ export const Main = () => {
               <th className="category">total</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="main__products_items">
             {items.map((item) => (
               <tr key={item.id}>
                 <td className="item ">1</td>
@@ -228,16 +228,15 @@ export const Main = () => {
             ))}
           </tbody>
         </table>
-        <form className="form_main_box" onSubmit={handleSubmit}>
-          <input
-            name="products"
-            placeholder="aceite,harina,azucar"
-            className="input"
-          />
-          <input type="submit" value={"Buscar"} className="button_seach" />
-        </form>
       </section>
-
+      <form className="form_main_box" onSubmit={handleSubmit}>
+        <input
+          name="products"
+          placeholder="aceite,harina,azucar"
+          className="input"
+        />
+        <input type="submit" value={"Buscar"} className="button_seach" />
+      </form>
       <section className="main__products_total">
         <h3>monto total</h3>
         <strong>$10000</strong>

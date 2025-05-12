@@ -11,22 +11,22 @@ export const Navbar = () => {
         <ul className="navbar__links">
           <li>
             <a href="#" className="navigate">
-              Inicio
+              Home
             </a>
           </li>
           <li>
             <a href="#" className="navigate">
-              Productos
+              Caja
             </a>
           </li>
           <li>
             <a href="#" className="navigate">
-              Ventas
+              productos
             </a>
           </li>
           <li>
             <a href="#" className="navigate">
-              Clientes
+              Informes
             </a>
           </li>
         </ul>
