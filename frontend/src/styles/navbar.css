@@ -13,23 +13,33 @@
 .navbar__logo {
   max-width: 80px;
   gap: 30px;
+  padding: 5px;
 }
 .navbar__links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 15px;
+  gap: 25px;
 }
-
-.navigate {
-  color: #667085;
+.link {
   text-decoration: none;
-  padding: 5px;
-  border-radius: 5px;
+  color: #667085;
   font-size: 16px;
+  display: flex;
+}
+.navigate {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  width: 30%;
+}
+.icon {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 .navigate:hover {
-  background-color: #838895;
-  transition: 0.3s;
+  filter: brightness(0) saturate(100%) invert(57%) sepia(78%) saturate(380%)
+    hue-rotate(101deg) brightness(92%);
 }

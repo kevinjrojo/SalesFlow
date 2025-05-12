@@ -1,4 +1,8 @@
 import Logo from "../assets/Logo.png";
+import Home from "../assets/home.png";
+import Sales from "../assets/sales.png";
+import Products from "../assets/products.png";
+import Information from "../assets/information.png";
 import "../styles/navbar.css";
 
 export const Navbar = () => {
@@ -9,23 +13,27 @@ export const Navbar = () => {
           <img src={Logo} alt="Logo" className="navbar__logo" />
         </div>
         <ul className="navbar__links">
-          <li>
-            <a href="#" className="navigate">
+          <li className="navigate">
+            <img src={Home} alt="icon-navigate" className="icon" />
+            <a href="#" className="link">
               Home
             </a>
           </li>
-          <li>
-            <a href="#" className="navigate">
+          <li className="navigate">
+            <img src={Sales} alt="icon-navigate" className="icon" />
+            <a href="#" className="link">
               Caja
             </a>
           </li>
-          <li>
-            <a href="#" className="navigate">
+          <li className="navigate">
+            <img src={Products} alt="icon-navigate" className="icon" />
+            <a href="#" className="link">
               productos
             </a>
           </li>
-          <li>
-            <a href="#" className="navigate">
+          <li className="navigate">
+            <img src={Information} alt="icon-navigate" className="icon" />
+            <a href="#" className="link">
               Informes
             </a>
           </li>
