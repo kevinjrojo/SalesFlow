@@ -8,7 +8,6 @@ export const Box = () => {
     <div className="box">
       <Navbar />
       <Header />
-
       <Main />
     </div>
   );

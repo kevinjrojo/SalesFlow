@@ -175,12 +175,13 @@ export const Main = () => {
   };
 
   return (
-    <div className="main">
+    <div className="main__tiket_container">
       <article className="main_Date">
         <h2>Factura #2020205226211</h2>
         <p>Fecha: 2023-10-20</p>
       </article>
-      <section className="main__container">
+
+      <section className="main__tiket_header">
         <div className="main__logo">
           <img src={Logo} alt="logo" className="main__logo" />
         </div>
@@ -195,50 +196,52 @@ export const Main = () => {
           <strong>$10,000</strong>
         </article>
       </section>
-      <section className="main__products">
-        <h3>Productos</h3>
-        <table className="main__products-table">
+      <section className="main__products_table">
+        <table>
           <thead>
-            <tr className="main__products-table-head">
-              <th>Nº</th>
-              <th>Nombre</th>
-              <th>codigo</th>
-              <th>Cantidad</th>
-              <th>Precio</th>
-              <th>IVA</th>
-              <th>Descuentos</th>
-              <th>total</th>
+            <tr className="main__products_category">
+              <th className="category">Nº</th>
+              <th className="category">Nombre</th>
+              <th className="category">codigo</th>
+              <th className="category">Cantidad</th>
+              <th className="category">Precio</th>
+              <th className="category">IVA</th>
+              <th className="category">Descuentos</th>
+              <th className="category">total</th>
             </tr>
           </thead>
           <tbody>
             {items.map((item) => (
               <tr key={item.id}>
-                <td>1</td>
+                <td className="item ">1</td>
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                  <td>{item.name}</td>
-                  <td>{item.description}</td>
+                  <td className="item ">{item.name}</td>
+                  <td className="item ">{item.description}</td>
                 </div>
-                <td>{item.gtin}</td>
-                <td>1</td>
-
-                <td>${item.unit_price}</td>
-                <td>cant</td>
-                <td>des</td>
-                <td></td>
+                <td className="item ">{item.gtin}</td>
+                <td className="item ">1</td>
+                <td className="item ">${item.unit_price}</td>
+                <td className="item ">cant</td>
+                <td className="item ">des</td>
+                <td className="item ">tot</td>
               </tr>
             ))}
           </tbody>
         </table>
+        <form className="form_main_box" onSubmit={handleSubmit}>
+          <input
+            name="products"
+            placeholder="aceite,harina,azucar"
+            className="input"
+          />
+          <input type="submit" value={"Buscar"} className="button_seach" />
+        </form>
       </section>
-      <form className="form_main_box" onSubmit={handleSubmit}>
-        <input
-          name="products"
-          placeholder="aceite,harina,azucar"
-          className="input"
-        />
-        <input type="submit" value={"Buscar"} className="button_seach" />
-      </form>
-      <div></div>
+
+      <section className="main__products_total">
+        <h3>monto total</h3>
+        <strong>$10000</strong>
+      </section>
     </div>
   );
 };

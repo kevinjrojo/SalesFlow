@@ -1,12 +1,14 @@
 .navbar {
-  grid-column-start: 1;
-  grid-row-start: 1;
-  grid-column: span 1 / span 1;
-  grid-row: span 5 / span 5;
   background-color: #f0f1f3;
   padding: 2px;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row: 1 / 4;
 }
 .navbar__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .navbar__logo {
   max-width: 80px;
@@ -17,6 +19,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 15px;
 }
 
 .navigate {
