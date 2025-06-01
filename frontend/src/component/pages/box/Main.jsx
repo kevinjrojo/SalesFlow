@@ -182,7 +182,7 @@ export const Main = () => {
 
   return (
     <main className="box__main">
-      <article className="main_Date">
+      <article className="main_date">
         <h2>Factura #2020205226211</h2>
         <p>Fecha: 2023-10-20</p>
       </article>

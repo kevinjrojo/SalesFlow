@@ -1,0 +1,24 @@
+.dashboard__layout {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "sidebar topbar"
+        "sidebar main";
+    grid-template-columns: 250px calc(100vw - 300px);
+    grid-template-rows: auto 1fr;
+
+}
+
+.header__layout {
+    color: #fff;
+}
+
+.navbar__layout {
+    grid-area: sidebar;
+}
+
+.main__layout {
+    grid-area: main;
+    padding: 1rem;
+}

@@ -1,14 +1,18 @@
 import "./App.css";
 import { Box } from "./component/pages/box/Box.jsx";
-// import { ConnTest } from "./component/utils/ConnTests";
+import { DashboardLayout } from "./component/layouts/DashboardLayout.jsx";
+import { Main } from "./component/pages/box/Main.jsx";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <section className="App">
-        <Box />
-      </section>
-    </>
+    <div className="app">
+      <BrowserRouter >
+        <DashboardLayout>
+          <Main />
+        </DashboardLayout>
+      </BrowserRouter>
+    </div>
   );
 }
 
