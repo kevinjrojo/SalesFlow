@@ -1,4 +1,4 @@
-.main__tiket_container {
+.box__main {
   margin: 5px;
   display: grid;
   grid-template-columns: repeat(2, auto);

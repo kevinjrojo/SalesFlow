@@ -1,9 +1,9 @@
-import Logo from "../assets/Logo.png";
-import Home from "../assets/home.png";
-import Sales from "../assets/sales.png";
-import Products from "../assets/products.png";
-import Information from "../assets/information.png";
-import "../styles/navbar.css";
+import Logo from "../../../assets/Logo.png";
+import Home from "../../../assets/home.png";
+import Sales from "../../../assets/sales.png";
+import Products from "../../../assets/products.png";
+import Information from "../../../assets/information.png";
+import "../../../styles/navbar.css";
 
 export const Navbar = () => {
   return (

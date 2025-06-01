@@ -1,6 +1,6 @@
-import user from "../assets/avatar.png";
+import user from "../../../assets/avatar.png";
 
-import "../styles/header.css";
+import "../../../styles/header.css";
 
 export const Header = () => {
   return (
