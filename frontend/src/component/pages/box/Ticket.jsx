@@ -1,10 +1,10 @@
-import "../../../styles/main.css";
+import "../../../styles/ticket.css";
 import Logo from "../../../assets/Logo.png";
 import { useState } from "react";
 import { useEffect } from "react";
 import { ProductTable } from "./ProductTable";
 
-export const Main = () => {
+export const Ticket = () => {
   const [items, setItems] = useState([]);
 
   // const productos = [
@@ -162,7 +162,7 @@ export const Main = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        setItems(data);
+        setItems((prev) => [...prev, ...data]);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -181,6 +181,7 @@ export const Main = () => {
   // };
 
   return (
+<<<<<<< HEAD:frontend/src/component/pages/box/Main.jsx
     <main className="box__main">
       <article className="main_date">
         <h2>Factura #2020205226211</h2>
@@ -210,10 +211,45 @@ export const Main = () => {
         />
         <input type="submit" value={"Buscar"} className="button_seach" />
       </form>
+=======
+    <div className="ticket">
+      <main>
+        <section className="ticket_date">
+          <h2>Factura #2020205226211</h2>
+          <p>Fecha: 2023-10-20</p>
+        </section>
+        <section className="business_details">
+          <section className="ticket_header">
+            <div>
+              <img src={Logo} alt="logo" className="ticket_logo" />
+            </div>
+            <article className="ticket_date_user">
+              <h3>Salesflow</h3>
+              <p>Direccion de venta, argentina</p>
+              <p>CUIT: 21343223 | contact@gmail.com</p>
+            </article>
+            <article className="ticket_code">
+              <h4>#2020205226211</h4>
+            </article>
+          </section>
+          <section>
+            <ProductTable products={items} />
+            <form onSubmit={handleSubmit}>
+              <input
+                name="products"
+                placeholder="aceite,harina,azucar"
+                className="input"
+              />
+              <input type="submit" value={"Buscar"} className="button_seach" />
+            </form>
+          </section>
+        </section>
+      </main>
+>>>>>>> 294bebe67b25739a5b48ab89c8940b2a028ae679:frontend/src/component/pages/box/Ticket.jsx
       <section className="main__products_total">
         <h3>monto total</h3>
         <strong>$10000</strong>
       </section>
-    </main>
+    </div>
   );
 };
