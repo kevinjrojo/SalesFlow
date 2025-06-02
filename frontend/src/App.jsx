@@ -8,6 +8,7 @@ function App() {
       <section className="App">
         <Box />
       </section>
+      <div></div>
     </>
   );
 }
