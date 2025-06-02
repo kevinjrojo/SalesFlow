@@ -6,7 +6,7 @@ export const ProductTable = ({ products }) => {
       <thead>
         <tr>
           <th>Nº</th>
-          <th style={{ width: "12rem", textAlign: "start" }}>Nombre</th>
+          <th className="id">Nombre</th>
           <th>codigo</th>
           <th>Cantidad</th>
           <th>Precio</th>
@@ -19,17 +19,9 @@ export const ProductTable = ({ products }) => {
         {products.map((item) => (
           <tr key={item.id} className="products_items">
             <td>1</td>
-
-            <td
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                width: "15rem",
-              }}
-            >
+            <td className="id">
               <span>{item.name}</span> {item.description}
             </td>
-
             <td>{item.gtin}</td>
             <td>1</td>
             <td>${item.unit_price}</td>
