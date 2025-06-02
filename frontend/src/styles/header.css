@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   background-color: #f0f1f3;
-  margin: 5px;
   grid-row-start: 1;
   grid-column-start: 2;
 }
