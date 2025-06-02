@@ -61,7 +61,7 @@
 }
 .products_table tbody {
   overflow: auto;
-  height: 4rem;
+  height: 6rem;
 }
 .products_items {
 }

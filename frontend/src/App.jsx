@@ -5,13 +5,12 @@ import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="app">
-      <BrowserRouter >
-        <DashboardLayout>
-          <Main />
-        </DashboardLayout>
-      </BrowserRouter>
-    </div>
+    <>
+      <section className="App">
+        <Box />
+      </section>
+      <div></div>
+    </>
   );
 }
 
