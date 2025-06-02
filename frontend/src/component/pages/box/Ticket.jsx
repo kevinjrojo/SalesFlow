@@ -180,12 +180,15 @@ export const Ticket = () => {
   //   console.log(a);
   // };
 
+  // Obtener la fecha actual en formato local
+  const fechaActual = new Date().toLocaleString();
+
   return (
     <div className="ticket">
       <main>
         <section className="ticket_date">
           <h2>Factura #2020205226211</h2>
-          <p>Fecha: 2023-10-20</p>
+          <p>Fecha: {fechaActual}</p>
         </section>
         <section className="business_details">
           <section className="ticket_header">
