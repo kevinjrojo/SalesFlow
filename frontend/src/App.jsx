@@ -1,7 +1,6 @@
 import "./App.css";
 import { Box } from "./component/pages/box/Box.jsx";
 import { DashboardLayout } from "./component/layouts/DashboardLayout.jsx";
-import { Main } from "./component/pages/box/Main.jsx";
 import { BrowserRouter } from "react-router-dom";
 
 function App() {

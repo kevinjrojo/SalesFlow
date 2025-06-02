@@ -181,37 +181,6 @@ export const Ticket = () => {
   // };
 
   return (
-<<<<<<< HEAD:frontend/src/component/pages/box/Main.jsx
-    <main className="box__main">
-      <article className="main_date">
-        <h2>Factura #2020205226211</h2>
-        <p>Fecha: 2023-10-20</p>
-      </article>
-      <section className="main__tiket_header">
-        <div className="main__logo">
-          <img src={Logo} alt="logo" className="main__logo" />
-        </div>
-        <article className="main__description">
-          <h3>Salesflow</h3>
-          <p>Direccion de venta, argentina</p>
-          <p>CUIT: 21343223 | contact@gmail.com</p>
-        </article>
-        <article className="main__mount">
-          <h4>#2020205226211</h4>
-          <p>Monto total</p>
-          <strong>$10,000</strong>
-        </article>
-      </section>
-      <ProductTable products={items} />
-      <form className="form_main_box" onSubmit={handleSubmit}>
-        <input
-          name="products"
-          placeholder="aceite,harina,azucar"
-          className="input"
-        />
-        <input type="submit" value={"Buscar"} className="button_seach" />
-      </form>
-=======
     <div className="ticket">
       <main>
         <section className="ticket_date">
@@ -245,7 +214,6 @@ export const Ticket = () => {
           </section>
         </section>
       </main>
->>>>>>> 294bebe67b25739a5b48ab89c8940b2a028ae679:frontend/src/component/pages/box/Ticket.jsx
       <section className="main__products_total">
         <h3>monto total</h3>
         <strong>$10000</strong>
